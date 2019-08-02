@@ -1,0 +1,234 @@
+<ion-header>
+    <ion-toolbar color="secondary">
+        <ion-buttons slot="start">
+            <ion-back-button defaultHref="home" *ngIf="backbutton"></ion-back-button>
+        </ion-buttons>
+
+        <ion-title>Calender</ion-title>
+
+        <!-- <ion-buttons slot="primary">
+            <ion-button (click)="exit()">
+                <ion-icon slot="icon-only" name="ios-close-circle-outline"></ion-icon>
+            </ion-button>
+        </ion-buttons> -->
+
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+    <div *ngIf="page0" class="main">
+        <ion-card class="welcome-card">
+            <img src="/assets/img/calender2.jpg" alt="" />
+            <ion-card-header>
+                <ion-card-title>Overview</ion-card-title>
+            </ion-card-header>
+            <ion-card-content>
+                <ion-item lines="none">
+                    <ion-icon slot="start" color="medium" name="time"></ion-icon>
+                    <ion-label> 2:30 duration</ion-label>
+                </ion-item>
+
+                <ion-item lines="none">
+                    <ion-icon slot="start" color="medium" name="time"></ion-icon>
+                    <ion-label>Answer 5 timed questions</ion-label>
+                </ion-item>
+            </ion-card-content>
+        </ion-card>
+
+
+        <!-- <p>Learning is Fun</p> -->
+
+        <!-- <img src="../../assets/imgs/KidsQuizz.jpg" id="movePic"><br> -->
+        <div class="ion-padding">
+            <ion-button (click)="startButton()" expand="full" color="secondary" class="round">Press To Start Playing</ion-button>
+        </div>
+    </div>
+    <!-- == -->
+    <div class="ion-padding">
+        <div *ngIf="Page1">
+
+            <h1>Calender Facts</h1>
+            <h5>Time : {{timeValue}}</h5>
+
+            <h6>Q1. How many months do we have in a year?</h6>
+
+            <ion-radio-group [(ngModel)]="Q1">
+                <ion-item>
+                    <ion-label>7</ion-label>
+                    <ion-radio slot="start" color="success" value="7"></ion-radio>
+                </ion-item>
+
+                <ion-item>
+                    <ion-label>13</ion-label>
+                    <ion-radio slot="start" color="success" value="13"></ion-radio>
+                </ion-item>
+
+                <ion-item>
+                    <ion-label>40</ion-label>
+                    <ion-radio slot="start" color="success" value="40"></ion-radio>
+                </ion-item>
+                <ion-item>
+                    <ion-label>12</ion-label>
+                    <ion-radio slot="start" color="success" value="12"></ion-radio>
+                </ion-item>
+            </ion-radio-group>
+
+            <ion-button (click)="Next1()" expand="full" color="secondary">Next</ion-button>
+
+        </div>
+
+        <div *ngIf="Page2">
+
+            <h1>Calender Facts</h1>
+            <h5>Time : {{timeValue}}</h5>
+
+            <h6>Q2. How many days do we have in a february?</h6>
+
+            <ion-radio-group [(ngModel)]="Q2">
+                <ion-item>
+                    <ion-label>31</ion-label>
+                    <ion-radio slot="start" color="success" value="31"></ion-radio>
+                </ion-item>
+                <ion-item>
+                    <ion-label>30</ion-label>
+                    <ion-radio slot="start" color="success" value="30"></ion-radio>
+                </ion-item>
+                <ion-item>
+                    <ion-label>28</ion-label>
+                    <ion-radio slot="start" color="success" value="28"></ion-radio>
+                </ion-item>
+
+                <ion-item>
+                    <ion-label>27</ion-label>
+                    <ion-radio slot="start" color="success" value="27"></ion-radio>
+                </ion-item>
+
+            </ion-radio-group>
+
+            <ion-button color="secondary" expand="full" (click)="Next2()">Next</ion-button>
+
+        </div>
+
+
+
+        <!-- ============================================================================================= -->
+
+        <div *ngIf="Page3">
+
+            <h1>Calender Facts</h1>
+            <h5>Time : {{timeValue}}</h5>
+
+            <h6>Q3. How many days do we have in a week?</h6>
+
+
+            <ion-radio-group [(ngModel)]="Q3">
+                <ion-item>
+                    <ion-label>30</ion-label>
+                    <ion-radio slot="start" color="success" value="30"></ion-radio>
+                </ion-item>
+
+                <ion-item>
+                    <ion-label>12</ion-label>
+                    <ion-radio slot="start" color="success" value="12"></ion-radio>
+                </ion-item>
+                <ion-item>
+                    <ion-label>7</ion-label>
+                    <ion-radio slot="start" color="success" value="7"></ion-radio>
+                </ion-item>
+                <ion-item>
+                    <ion-label>31</ion-label>
+                    <ion-radio slot="start" color="success" value="31"></ion-radio>
+                </ion-item>
+
+            </ion-radio-group>
+
+
+            <ion-button color="secondary" expand="full" (click)="Next3()">Next</ion-button>
+
+
+        </div>
+
+        <!-- ================================================================================================= -->
+        <div *ngIf="Page4">
+
+
+            <h1>Calender Facts</h1>
+            <h5>Time : {{timeValue}}</h5>
+
+            <h6>Q4. How many days are the in a year?</h6>
+
+
+            <ion-radio-group [(ngModel)]="Q4">
+                <ion-item>
+                    <ion-label>365</ion-label>
+                    <ion-radio slot="start" color="success" value="365"></ion-radio>
+                </ion-item>
+                <ion-item>
+                    <ion-label>388</ion-label>
+                    <ion-radio slot="start" color="success" value="388"></ion-radio>
+                </ion-item>
+
+                <ion-item>
+                    <ion-label>330</ion-label>
+                    <ion-radio slot="start" color="success" value="330"></ion-radio>
+                </ion-item>
+
+                <ion-item>
+                    <ion-label>30</ion-label>
+                    <ion-radio slot="start" color="success" value="30"></ion-radio>
+                </ion-item>
+
+            </ion-radio-group>
+
+            <ion-button color="secondary" expand="full" (click)="Next4()">Next</ion-button>
+        </div>
+        <!-- ==================================================================================================       -->
+        <div *ngIf="Page5">
+            <h1>Calender Facts</h1>
+            <h5>Time : {{timeValue}}</h5>
+
+            <h6>Q5. The calendar for the year 2007 will be the same for the year?</h6>
+
+
+            <ion-radio-group [(ngModel)]="Q5">
+                <ion-item>
+                    <ion-label>2014</ion-label>
+                    <ion-radio slot="start" color="success" value="2014"></ion-radio>
+                </ion-item>
+                <ion-item>
+                    <ion-label>2018</ion-label>
+                    <ion-radio slot="start" color="success" value="2018"></ion-radio>
+                </ion-item>
+                <ion-item>
+                    <ion-label>2016</ion-label>
+                    <ion-radio slot="start" color="success" value="2016"></ion-radio>
+                </ion-item>
+
+                <ion-item>
+                    <ion-label>2017</ion-label>
+                    <ion-radio slot="start" color="success" value="2017"></ion-radio>
+                </ion-item>
+
+            </ion-radio-group>
+
+            <ion-button color="secondary" expand="full" (click)="Next5()">Submit</ion-button>
+        </div>
+
+
+        <div *ngIf="Page6">
+            <h2>Thanks For Playing.</h2>
+            <h4>Score Results</h4>
+            <ion-item>
+                <ion-label> Time Taken : {{min}}m {{sec}}s</ion-label>
+            </ion-item>
+            <ion-item>
+                <ion-label> Final Score : {{count}}/5</ion-label>
+            </ion-item>
+            <!-- <ion-button id="btton" color="secondary" (click)=" myResults()">Score</ion-button> -->
+            <ion-button color="secondary" expand="full" (click)="rePlay()">Exit</ion-button>
+
+
+        </div>
+    </div>
+</ion-content>

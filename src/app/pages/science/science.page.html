@@ -1,0 +1,228 @@
+<ion-header>
+    <ion-toolbar color="secondary">
+        <ion-buttons slot="start">
+            <ion-back-button defaultHref="home" *ngIf="backbutton"></ion-back-button>
+        </ion-buttons>
+        <ion-title>science</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+    <div *ngIf="page0" class="main">
+        <ion-card class="welcome-card">
+            <img src="/assets/img/science.jpg" alt="" />
+            <ion-card-header>
+                <ion-card-title>Overview</ion-card-title>
+            </ion-card-header>
+            <ion-card-content>
+                <ion-item lines="none">
+                    <ion-icon slot="start" color="medium" name="time"></ion-icon>
+                    <ion-label> 2:30 duration</ion-label>
+                </ion-item>
+
+                <ion-item lines="none">
+                    <ion-icon slot="start" color="medium" name="time"></ion-icon>
+                    <ion-label>Answer 5 timed questions</ion-label>
+                </ion-item>
+            </ion-card-content>
+        </ion-card>
+
+
+        <!-- <p>Learning is Fun</p> -->
+
+        <!-- <img src="../../assets/imgs/KidsQuizz.jpg" id="movePic"><br> -->
+        <div class="ion-padding">
+            <ion-button (click)="startButton()" expand="full" color="secondary" class="round">Press To Start Playing</ion-button>
+        </div>
+    </div>
+    <div class="ion-padding">
+        <!-- == -->
+
+        <div *ngIf="Page1">
+
+            <h1>Science Facts</h1>
+            <h5>Time : {{timeValue}}</h5>
+
+            <h6>Q1. Fluid tubes that help in balance are known as?</h6>
+
+            <ion-radio-group [(ngModel)]="Q1">
+                <ion-item>
+                    <ion-label>Semicircular canals</ion-label>
+                    <ion-radio slot="start" color="success" value="Semicircular canals"></ion-radio>
+                </ion-item>
+
+                <ion-item>
+                    <ion-label>pinna</ion-label>
+                    <ion-radio slot="start" color="success" value="pinna"></ion-radio>
+                </ion-item>
+
+                <ion-item>
+                    <ion-label>eardrum</ion-label>
+                    <ion-radio slot="start" color="success" value="eardrum"></ion-radio>
+                </ion-item>
+                <ion-item>
+                    <ion-label>cochlea</ion-label>
+                    <ion-radio slot="start" color="success" value="cochlea"></ion-radio>
+                </ion-item>
+            </ion-radio-group>
+
+            <ion-button expand="full" (click)="Next1()" color="secondary">Next</ion-button>
+
+        </div>
+
+        <div *ngIf="Page2">
+
+            <h1>Science Facts</h1>
+            <h5>Time : {{timeValue}}</h5>
+
+            <h6>Q2. Process of photosynthesis takes place in the?</h6>
+
+            <ion-radio-group [(ngModel)]="Q2">
+                <ion-item>
+                    <ion-label>Starch and Sucrose</ion-label>
+                    <ion-radio slot="start" color="success" value="Starch and Sucrose"></ion-radio>
+                </ion-item>
+                <ion-item>
+                    <ion-label>Glucose and oxygen</ion-label>
+                    <ion-radio slot="start" color="success" value="Glucose and oxygen"></ion-radio>
+                </ion-item>
+                <ion-item>
+                    <ion-label>chloroplast</ion-label>
+                    <ion-radio slot="start" color="success" value="chloroplast"></ion-radio>
+                </ion-item>
+
+                <ion-item>
+                    <ion-label>system</ion-label>
+                    <ion-radio slot="start" color="success" value="system"></ion-radio>
+                </ion-item>
+
+            </ion-radio-group>
+
+            <ion-button expand="full" color="secondary" (click)="Next2()">Next</ion-button>
+
+        </div>
+
+
+
+        <!-- ============================================================================================= -->
+
+        <div *ngIf="Page3">
+
+            <h1>Science Facts</h1>
+            <h5>Time : {{timeValue}}</h5>
+
+            <h6>Q3. Basic building blocks that make up each and every object are known as?</h6>
+
+
+            <ion-radio-group [(ngModel)]="Q3">
+                <ion-item>
+                    <ion-label>solution</ion-label>
+                    <ion-radio slot="start" color="success" value="solution"></ion-radio>
+                </ion-item>
+
+                <ion-item>
+                    <ion-label>mixture</ion-label>
+                    <ion-radio slot="start" color="success" value="mixture"></ion-radio>
+                </ion-item>
+                <ion-item>
+                    <ion-label>molecule</ion-label>
+                    <ion-radio slot="start" color="success" value="molecule"></ion-radio>
+                </ion-item>
+                <ion-item>
+                    <ion-label>atom</ion-label>
+                    <ion-radio slot="start" color="success" value="atom"></ion-radio>
+                </ion-item>
+
+            </ion-radio-group>
+
+
+            <ion-button expand="full" color="secondary" (click)="Next3()">Next</ion-button>
+
+
+        </div>
+
+        <!-- ================================================================================================= -->
+        <div *ngIf="Page4">
+
+            <h1>Science Facts</h1>
+            <h5>Time : {{timeValue}}</h5>
+
+            <h6>Q4. A very thin and sensitive membrane that plays an important part in converting sound waves by vibrating is known as?</h6>
+
+            <ion-radio-group [(ngModel)]="Q4">
+
+                <ion-item>
+                    <ion-label>canal</ion-label>
+                    <ion-radio slot="start" color="success" value="canal"></ion-radio>
+                </ion-item>
+                <ion-item>
+                    <ion-label>pinna</ion-label>
+                    <ion-radio slot="start" color="success" value="pinna"></ion-radio>
+                </ion-item>
+
+                <ion-item>
+                    <ion-label>eardrum</ion-label>
+                    <ion-radio slot="start" color="success" value="eardrum"></ion-radio>
+                </ion-item>
+
+                <ion-item>
+                    <ion-label>cochlea</ion-label>
+                    <ion-radio slot="start" color="success" value="cochlea"></ion-radio>
+                </ion-item>
+
+            </ion-radio-group>
+
+            <ion-button color="secondary" expand="full" (click)="Next4()">Next</ion-button>
+        </div>
+
+        <!-- ==================================================================================================       -->
+        <div *ngIf="Page5">
+
+            <h1>Science Facts</h1>
+            <h5>Time : {{timeValue}}</h5>
+
+            <h6>Q5. A substance that consists of two or more atoms bound together is called?</h6>
+
+
+            <ion-radio-group [(ngModel)]="Q5">
+                <ion-item>
+                    <ion-label>compound</ion-label>
+                    <ion-radio slot="start" color="success" value="compound"></ion-radio>
+                </ion-item>
+                <ion-item>
+                    <ion-label>element</ion-label>
+                    <ion-radio slot="start" color="success" value="element"></ion-radio>
+                </ion-item>
+                <ion-item>
+                    <ion-label>atom</ion-label>
+                    <ion-radio slot="start" color="success" value="atom"></ion-radio>
+                </ion-item>
+
+                <ion-item>
+                    <ion-label>molecule</ion-label>
+                    <ion-radio slot="start" color="success" value="molecule"></ion-radio>
+                </ion-item>
+
+            </ion-radio-group>
+
+            <ion-button color="secondary" expand="full" (click)="Next5()">Submit</ion-button>
+        </div>
+
+
+        <div *ngIf="Page6">
+
+            <h1>Thanks For Playing.</h1>
+            <h4>Score Results</h4>
+            <ion-item>
+                <ion-label> Time Taken: {{min}}m {{sec}}s</ion-label>
+            </ion-item>
+            <ion-item>
+                <ion-label> Final Score : {{count}}/5</ion-label>
+            </ion-item>
+            <!-- <ion-button id="btton" color="secondary" (click)=" myResults()">Score</ion-button> -->
+            <ion-button color="secondary" expand="full" (click)="rePlay()">Exit</ion-button>
+
+        </div>
+    </div>
+</ion-content>

@@ -1,0 +1,36 @@
+<ion-header>
+    <ion-toolbar color="secondary">
+        <ion-title>
+            Quiz App
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-card class="welcome-card">
+        <img src="/assets/img/RFQuiz.jpg" alt="" />
+        <ion-card-header>
+
+            <ion-card-title>Challenge Your Brain</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+            <p>Take one of the following Quiz</p>
+        </ion-card-content>
+    </ion-card>
+    <div class="ion-padding">
+
+        <section class="full-width">
+
+            <ion-button expand="full" color="secondary" (click)="calender()" class="round">Calender</ion-button>
+        </section>
+        <section class="full-width">
+
+            <ion-button expand="full" color="secondary" (click)="science()" class="round">Science</ion-button>
+        </section>
+        <section class="full-width">
+
+            <ion-button expand="full" color="secondary" (click)="animal()" class="round">Animal</ion-button>
+        </section>
+    </div>
+
+</ion-content>

@@ -1,0 +1,10 @@
+:host {
+    ion-content,
+    ion-item {
+        --background: none;
+        background: rgb(223, 223, 223);
+        // background: url("/assets/img/calender.jpg");
+        background-size: cover;
+        background-position: center center;
+    }
+}

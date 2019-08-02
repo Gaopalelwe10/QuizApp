@@ -1,0 +1,257 @@
+<ion-header>
+    <ion-toolbar color="secondary">
+        <ion-buttons slot="start">
+            <ion-back-button defaultHref="home" *ngIf="backbutton"></ion-back-button>
+        </ion-buttons>
+        <ion-title>Animal</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div *ngIf="page0" class="main">
+        <ion-card class="welcome-card">
+            <img src="/assets/img/animals.jpg" alt="" />
+            <ion-card-header>
+                <ion-card-title>Overview</ion-card-title>
+            </ion-card-header>
+            <ion-card-content>
+                <ion-item lines="none">
+                    <ion-icon slot="start" color="medium" name="time"></ion-icon>
+                    <ion-label> 2:30 duration</ion-label>
+                </ion-item>
+
+                <ion-item lines="none">
+                    <ion-icon slot="start" color="medium" name="time"></ion-icon>
+                    <ion-label>Answer 5 timed questions</ion-label>
+                </ion-item>
+            </ion-card-content>
+        </ion-card>
+
+
+        <!-- <p>Learning is Fun</p> -->
+
+        <!-- <img src="../../assets/imgs/KidsQuizz.jpg" id="movePic"><br> -->
+        <div class="ion-padding">
+            <ion-button (click)="startButton()" expand="full" color="secondary" class="round">Press To Start Playing</ion-button>
+        </div>
+    </div>
+    <!-- == -->
+    <div class="ion-padding">
+        <div *ngIf="Page1">
+
+            <h1>Animal Facts</h1>
+            <h5>Time : {{timeValue}}</h5>
+
+            <ion-card class="welcome-card">
+                <img src="{{img1}}" alt="" />
+            </ion-card>
+
+            <ion-radio-group [(ngModel)]="Q1">
+                <ion-list-header>
+                    <ion-label>
+                        <h2>Q1. Which animal does the picture represent?</h2>
+                    </ion-label>
+                </ion-list-header>
+                <ion-item>
+                    <ion-label>Monkey</ion-label>
+                    <ion-radio slot="start" color="success" value="Monkey"></ion-radio>
+                </ion-item>
+
+                <ion-item>
+                    <ion-label>Lion</ion-label>
+                    <ion-radio slot="start" color="success" value="Lion"></ion-radio>
+                </ion-item>
+
+                <ion-item>
+                    <ion-label>Tiger</ion-label>
+                    <ion-radio slot="start" color="success" value="Tiger"></ion-radio>
+                </ion-item>
+                <ion-item>
+                    <ion-label>Elephant</ion-label>
+                    <ion-radio slot="start" color="success" value="Elephant"></ion-radio>
+                </ion-item>
+            </ion-radio-group>
+
+            <ion-button expand="full" (click)="Next1()" color="secondary">Next</ion-button>
+
+        </div>
+
+        <div *ngIf="Page2">
+
+            <h1>Animal Facts</h1>
+            <h5>Time : {{timeValue}}</h5>
+
+            <ion-card class="welcome-card">
+                <img src="{{img2}}" alt="" />
+            </ion-card>
+
+            <ion-radio-group [(ngModel)]="Q2">
+                <ion-list-header>
+                    <ion-label>
+                        <h2>Q2. Which animal does the picture represent?</h2>
+                    </ion-label>
+                </ion-list-header>
+                <ion-item>
+                    <ion-label>Monkey</ion-label>
+                    <ion-radio slot="start" color="success" value="Monkey"></ion-radio>
+                </ion-item>
+                <ion-item>
+                    <ion-label>Elephant</ion-label>
+                    <ion-radio slot="start" color="success" value="Elephant"></ion-radio>
+                </ion-item>
+                <ion-item>
+                    <ion-label>Rhino</ion-label>
+                    <ion-radio slot="start" color="success" value="Rhino"></ion-radio>
+                </ion-item>
+
+                <ion-item>
+                    <ion-label>Tiger</ion-label>
+                    <ion-radio slot="start" color="success" value="Tiger"></ion-radio>
+                </ion-item>
+
+            </ion-radio-group>
+
+            <ion-button color="secondary" expand="full" (click)="Next2()">Next</ion-button>
+
+        </div>
+
+
+
+        <!-- ============================================================================================= -->
+
+        <div *ngIf="Page3">
+
+            <h1>Animal Facts</h1>
+            <h5>Time : {{timeValue}}</h5>
+
+            <ion-card class="welcome-card">
+                <img src="{{img3}}" alt="" />
+            </ion-card>
+
+            <ion-radio-group [(ngModel)]="Q3">
+                <ion-list-header>
+                    <ion-label>
+                        <h2>Q3. Which animal does the picture represent?</h2>
+                    </ion-label>
+                </ion-list-header>
+                <ion-item>
+                    <ion-label>Elephant</ion-label>
+                    <ion-radio slot="start" color="success" value="Elephant"></ion-radio>
+                </ion-item>
+                <ion-item>
+                    <ion-label>Lion</ion-label>
+                    <ion-radio slot="start" color="success" value="Lion"></ion-radio>
+                </ion-item>
+
+                <ion-item>
+                    <ion-label>Tiger</ion-label>
+                    <ion-radio slot="start" color="success" value="Tiger"></ion-radio>
+                </ion-item>
+                <ion-item>
+                    <ion-label>Monkey</ion-label>
+                    <ion-radio slot="start" color="success" value="Monkey"></ion-radio>
+                </ion-item>
+            </ion-radio-group>
+
+
+            <ion-button color="secondary" expand="full" (click)="Next3()">Next</ion-button>
+
+
+        </div>
+
+        <!-- ================================================================================================= -->
+        <div *ngIf="Page4">
+
+
+            <h1>Animal Facts</h1>
+            <h5>Time : {{timeValue}}</h5>
+
+            <ion-card class="welcome-card">
+                <img src="{{img4}}" alt="" />
+            </ion-card>
+
+            <ion-radio-group [(ngModel)]="Q4">
+                <ion-list-header>
+                    <ion-label>
+                        <h2>Q4. Which animal does the picture represent?</h2>
+                    </ion-label>
+                </ion-list-header>
+                <ion-item>
+                    <ion-label>Monkey</ion-label>
+                    <ion-radio slot="start" color="success" value="Monkey"></ion-radio>
+                </ion-item>
+                <ion-item>
+                    <ion-label>Elephant</ion-label>
+                    <ion-radio slot="start" color="success" value="Elephant"></ion-radio>
+                </ion-item>
+                <ion-item>
+                    <ion-label>Rhino</ion-label>
+                    <ion-radio slot="start" color="success" value="Rhino"></ion-radio>
+                </ion-item>
+
+                <ion-item>
+                    <ion-label>Tiger</ion-label>
+                    <ion-radio slot="start" color="success" value="Tiger"></ion-radio>
+                </ion-item>
+
+            </ion-radio-group>
+
+            <ion-button color="secondary" expand="full" (click)="Next4()">Next</ion-button>
+        </div>
+        <!-- ==================================================================================================       -->
+        <div *ngIf="Page5">
+            <h1>Animal Facts</h1>
+            <h5>Time : {{timeValue}}</h5>
+
+            <ion-card class="welcome-card">
+                <img src="{{img5}}" alt="" />
+            </ion-card>
+
+            <ion-radio-group [(ngModel)]="Q5">
+                <ion-list-header>
+                    <ion-label>
+                        <h2>Q5. Which animal does the picture represent?</h2>
+                    </ion-label>
+                </ion-list-header>
+                <ion-item>
+                    <ion-label>Monkey</ion-label>
+                    <ion-radio slot="start" color="success" value="Monkey"></ion-radio>
+                </ion-item>
+                <ion-item>
+                    <ion-label>Elephant</ion-label>
+                    <ion-radio slot="start" color="success" value="Elephant"></ion-radio>
+                </ion-item>
+                <ion-item>
+                    <ion-label>Lion</ion-label>
+                    <ion-radio slot="start" color="success" value="Lion"></ion-radio>
+                </ion-item>
+
+                <ion-item>
+                    <ion-label>Tiger</ion-label>
+                    <ion-radio slot="start" color="success" value="Tiger"></ion-radio>
+                </ion-item>
+
+            </ion-radio-group>
+
+            <ion-button color="secondary" expand="full" (click)="Next5()">Submit</ion-button>
+        </div>
+
+
+        <div *ngIf="Page6">
+
+            <!-- <img src="../../assets/imgs/kid.jpg" id="imag"> -->
+            <h2>Thanks For Playing.</h2>
+            <h4>Score Results</h4>
+            <ion-item>
+                <ion-label> Time Taken : {{min}}m {{sec}}s</ion-label>
+            </ion-item>
+            <ion-item>
+                <ion-label> Final Score : {{count}}/5</ion-label>
+            </ion-item>
+            <!-- <ion-button id="btton" color="secondary" (click)=" myResults()">Score</ion-button> -->
+            <ion-button color="secondary" expand="full" (click)="rePlay()">Exit</ion-button>
+
+
+        </div>
+    </div>
+</ion-content>
