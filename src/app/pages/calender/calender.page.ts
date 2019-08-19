@@ -201,10 +201,12 @@ export class CalenderPage implements OnInit {
     this.Q3=0;
     this.Q4=0;
     this.Q5=0;
-    this.count=0;
+    
     this.Page6=false;
     
-    this.route.navigateByUrl("home")
+    // this.route.navigateByUrl("home")
+    this.route.navigate(['home'], { queryParams: { countC:this.count}});
+    this.count=0;
   }
   //  startTimer(){
  
@@ -235,7 +237,6 @@ export class CalenderPage implements OnInit {
           handler: () => {
             this.timerVar.unsubscribe()
             this.route.navigateByUrl("home")
-            console.log('Buy clicked');
           }
         }
       ]

@@ -202,10 +202,10 @@ export class SciencePage implements OnInit {
     this.Q3=0;
     this.Q4=0;
     this.Q5=0;
-    this.count=0;
+    // this.count=0;
     this.Page6=false;
-    
-    this.route.navigateByUrl("home")
+    this.route.navigate(['home'], { queryParams: { countS:this.count}});
+    // this.route.navigateByUrl("home")
   }
   //  startTimer(){
   //   this.timerVar = interval (500).subscribe( x =>{

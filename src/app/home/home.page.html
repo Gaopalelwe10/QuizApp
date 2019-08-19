@@ -15,6 +15,7 @@
         </ion-card-header>
         <ion-card-content>
             <p>Take one of the following Quiz</p>
+            <!-- {{count}} -->
         </ion-card-content>
     </ion-card>
     <div class="ion-padding">
@@ -31,6 +32,10 @@
 
             <ion-button expand="full" color="secondary" (click)="animal()" class="round">Animal</ion-button>
         </section>
-    </div>
+        <section class="full-width">
 
+            <ion-button expand="full" color="secondary" (click)="show()" class="round">Total</ion-button>
+        </section>
+    </div>
+    {{total}}
 </ion-content>
